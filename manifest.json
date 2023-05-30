@@ -10,7 +10,6 @@
         "css/content_script.css"
       ],
       "js": [
-        "js/jquery-3.7.0.js",
         "js/content_script.js"        
       ],
       "run_at": "document_end",

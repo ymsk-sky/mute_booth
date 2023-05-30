@@ -3,6 +3,11 @@
   "description": "mute goods in booth",
   "version": "1.0.0",
   "manifest_version": 3,
+  "action" : {
+    "default_title": "mute booth",
+    "default_icon": "img/icon_16x16.png",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["*://booth.pm/**"],

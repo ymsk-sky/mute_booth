@@ -5,15 +5,18 @@ console.log(elements.length);
 for (let i = 0; i < elements.length; i++) {
   const element = elements[i];
 
-  // 条件に合う要素を非表示にする
+  // 条件に合う要素を非表示状態にする
   if (element.getAttribute("data-product-brand") == "hanahanehomari") {
-    // タイトルを取得
-    const grandChildElement = element.querySelector(".item-card__title");
-    if (grandChildElement) {
-      const title = grandChildElement.innerText;
-      console.log("title:", title);
+    // タイトルを変更
+    const titleElement = element.querySelector(".item-card__title");
+    if (titleElement) {
+      titleElement.innerText = "-";
     }
-    
-    element.parentNode.removeChild(element);
+
+    // ショップ名を変更
+    const shopNameElement = element.querySelector(".item-card__shop-name");
+    if (shopNameElement) {
+      shopNameElement.innerText = "-"
+    }
   }
 }

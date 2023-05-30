@@ -18,5 +18,16 @@ for (let i = 0; i < elements.length; i++) {
     if (shopNameElement) {
       shopNameElement.innerText = "-"
     }
+
+    // サムネイル画像を代替画像に置き換え
+    const imgElement = element.querySelector(".item-card__thumbnail.js-thumbnail");
+    if (imgElement) {
+      // 代替画像準備
+      const imgURL = chrome.runtime.getURL("img/substitute.jpg");
+      console.log(imgURL);
+      // 既にある子要素から直接htmlを置き換え
+      imgElement.innerHTML = `<img src="${imgURL}">`;
+      // 代替画像を配置
+    }
   }
 }

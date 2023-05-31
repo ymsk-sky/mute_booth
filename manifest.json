@@ -3,6 +3,7 @@
   "description": "mute goods in booth",
   "version": "1.0.0",
   "manifest_version": 3,
+  "permissions": ["storage"],
   "action" : {
     "default_title": "mute booth",
     "default_icon": "img/icon_16x16.png",
@@ -15,7 +16,7 @@
         "css/content_script.css"
       ],
       "js": [
-        "js/content_script.js"        
+        "js/content_script.js"
       ],
       "run_at": "document_end",
       "all_frames": false

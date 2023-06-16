@@ -48,6 +48,11 @@ loadData().then(() => {
         imgElement.innerHTML = `<img src="${imgURL}">`;
         // 代替画像を配置
       }
+      
+      // ショップ画像を代替画像に置き換え
+      const shopImgElement = element.querySelector(".user-avatar.at-item-footer");
+      const shopImgURL = chrome.runtime.getURL("img/shop_16x16.png");
+      shopImgElement.src = shopImgURL;
     }
   }
 });
